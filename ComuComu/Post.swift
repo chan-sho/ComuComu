@@ -1,14 +1,14 @@
 //
-//  JpnPost.swift
+//  Post.swift
 //  ComuComu
 //
-//  Created by 高野翔 on 2018/12/22.
+//  Created by 高野翔 on 2018/12/26.
 //  Copyright © 2018 高野翔. All rights reserved.
 //
 
 import UIKit
 
-class JpnPost: UIViewController {
+class Post: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

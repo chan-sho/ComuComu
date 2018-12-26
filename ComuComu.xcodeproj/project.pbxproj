@@ -13,12 +13,13 @@
 		3179B9FE21CE270400E674B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3179B9FD21CE270400E674B8 /* Assets.xcassets */; };
 		3179BA0121CE270400E674B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3179B9FF21CE270400E674B8 /* LaunchScreen.storyboard */; };
 		3179BA0921CE5C5A00E674B8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179BA0821CE5C5A00E674B8 /* Login.swift */; };
-		3179BA0B21CE5CCC00E674B8 /* JpnPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179BA0A21CE5CCC00E674B8 /* JpnPost.swift */; };
-		3179BA0D21CE5CDE00E674B8 /* EngPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179BA0C21CE5CDE00E674B8 /* EngPost.swift */; };
 		3179BA0F21CE5D5000E674B8 /* Contacted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179BA0E21CE5D5000E674B8 /* Contacted.swift */; };
 		3179BA1121CE64B600E674B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3179BA1021CE64B600E674B8 /* GoogleService-Info.plist */; };
 		3179BA1521CE69BE00E674B8 /* AJAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3179BA1321CE69BE00E674B8 /* AJAlertController.xib */; };
 		3179BA1621CE69BE00E674B8 /* AJAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179BA1421CE69BE00E674B8 /* AJAlertController.swift */; };
+		319EB1A321D303D000384D13 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EB1A221D303D000384D13 /* Shop.swift */; };
+		319EB1A521D303EB00384D13 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EB1A421D303EB00384D13 /* Post.swift */; };
+		319EB1A721D3040200384D13 /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EB1A621D3040200384D13 /* Initial.swift */; };
 		61E9F456A680044CA8AAB56A /* Pods_ComuComu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF4D9075D695F861989CF96 /* Pods_ComuComu.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,12 +32,13 @@
 		3179BA0021CE270400E674B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3179BA0221CE270400E674B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3179BA0821CE5C5A00E674B8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		3179BA0A21CE5CCC00E674B8 /* JpnPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JpnPost.swift; sourceTree = "<group>"; };
-		3179BA0C21CE5CDE00E674B8 /* EngPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngPost.swift; sourceTree = "<group>"; };
 		3179BA0E21CE5D5000E674B8 /* Contacted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacted.swift; sourceTree = "<group>"; };
 		3179BA1021CE64B600E674B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3179BA1321CE69BE00E674B8 /* AJAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AJAlertController.xib; sourceTree = "<group>"; };
 		3179BA1421CE69BE00E674B8 /* AJAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AJAlertController.swift; sourceTree = "<group>"; };
+		319EB1A221D303D000384D13 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		319EB1A421D303EB00384D13 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		319EB1A621D3040200384D13 /* Initial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
 		360B24115E422A5B363D0BD2 /* Pods-ComuComu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComuComu.release.xcconfig"; path = "Pods/Target Support Files/Pods-ComuComu/Pods-ComuComu.release.xcconfig"; sourceTree = "<group>"; };
 		5BF4D9075D695F861989CF96 /* Pods_ComuComu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComuComu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEA150A62F4CAB9B9982DFE /* Pods-ComuComu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComuComu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ComuComu/Pods-ComuComu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,9 +81,10 @@
 				3179B9FF21CE270400E674B8 /* LaunchScreen.storyboard */,
 				3179B9F621CE270000E674B8 /* AppDelegate.swift */,
 				3179B9F821CE270000E674B8 /* ViewController.swift */,
+				319EB1A621D3040200384D13 /* Initial.swift */,
 				3179BA0821CE5C5A00E674B8 /* Login.swift */,
-				3179BA0A21CE5CCC00E674B8 /* JpnPost.swift */,
-				3179BA0C21CE5CDE00E674B8 /* EngPost.swift */,
+				319EB1A221D303D000384D13 /* Shop.swift */,
+				319EB1A421D303EB00384D13 /* Post.swift */,
 				3179BA0E21CE5D5000E674B8 /* Contacted.swift */,
 				3179B9FD21CE270400E674B8 /* Assets.xcassets */,
 				3179BA0221CE270400E674B8 /* Info.plist */,
@@ -257,10 +260,11 @@
 			files = (
 				3179BA0921CE5C5A00E674B8 /* Login.swift in Sources */,
 				3179BA0F21CE5D5000E674B8 /* Contacted.swift in Sources */,
-				3179BA0D21CE5CDE00E674B8 /* EngPost.swift in Sources */,
+				319EB1A721D3040200384D13 /* Initial.swift in Sources */,
 				3179B9F921CE270000E674B8 /* ViewController.swift in Sources */,
+				319EB1A321D303D000384D13 /* Shop.swift in Sources */,
 				3179BA1621CE69BE00E674B8 /* AJAlertController.swift in Sources */,
-				3179BA0B21CE5CCC00E674B8 /* JpnPost.swift in Sources */,
+				319EB1A521D303EB00384D13 /* Post.swift in Sources */,
 				3179B9F721CE270000E674B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

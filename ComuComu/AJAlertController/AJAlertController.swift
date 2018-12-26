@@ -5,6 +5,10 @@
 //  Created by Arpit Jain on 13/12/17.
 //  Copyright © 2017 Arpit Jain. All rights reserved.
 //
+// 【UserDefaults管理】"Initial"= 一番最初にアプリを開いた際の判定
+// 【UserDefaults管理】"EULACheckFlag"= プライバシーポリシー・利用規約のページをきちんと開いた事を確認するFlag
+// 【UserDefaults管理】"EULAagreement"= 利用規約に同意したかどうかの判定
+
 
 import UIKit
 import Foundation
@@ -61,6 +65,9 @@ class AJAlertController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAJAlertController()
+        
+        //userDefaultsの初期値設定
+        userDefaults.register(defaults: ["Initial" : "NO", "InitialtoLogin" : "NO"])
     }
     
     // MARK:- AJAlertController Private Functions
@@ -191,12 +198,40 @@ class AJAlertController: UIViewController {
     
     @IBAction func btnCancelTapped(sender: UIButton) {
         block!!(0,btnCancelTitle!)
-        hide()
+        
+        let EULAagreement :String = userDefaults.string(forKey: "EULAagreement")!
+        if EULAagreement == "NO" {
+            //プライバシーポリシー・利用規約のページをSafariで開くアクション
+            let url = URL(string: "https://chan-sho.github.io/")!
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+            
+                //プライバシーポリシー・利用規約のページをSafariで開いた事をFlagに反映("No" → "YES")
+                userDefaults.set("YES", forKey: "EULACheckFlag")
+                userDefaults.synchronize()
+            }
+        }
     }
+    
     
     @IBAction func btnOtherTapped(sender: UIButton) {
         block!!(1,btnOtherTitle!)
-        hide()
+        
+        let EULACheckFlag :String = userDefaults.string(forKey: "EULACheckFlag")!
+        if EULACheckFlag == "NO" {
+            SVProgressHUD.showError(withStatus: "【ご注意・お願い】\n\nリンクから内容を必ずご確認頂いた上で、同意するかどうかご判断ください。\n\nユーザー様の大切な個人情報を扱わせて頂くアプリですので、ご理解をお願い致します！")
+            return
+        }
+        else {
+            //利用規約同意済みのYESをUserDefaultsに保存する
+            userDefaults.set("YES", forKey: "EULAagreement")
+            userDefaults.set("YES", forKey: "Initial")
+            userDefaults.synchronize()
+            hide()
+            
+            // 画面を閉じてViewControllerに戻る
+            self.dismiss(animated: false, completion: nil)
+        }
     }
     
     @IBAction func btnOkTapped(sender: UIButton) 

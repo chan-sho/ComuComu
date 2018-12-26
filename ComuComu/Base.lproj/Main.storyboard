@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,16 +25,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="132.5" height="150"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="comByJpnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fqr-6O-Yuf"/>
-                                            <segue destination="eVd-8A-KVl" kind="show" identifier="toJpnPost" id="j1N-rf-yPw"/>
+                                            <action selector="shopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cUo-Er-Ged"/>
+                                            <segue destination="eVd-8A-KVl" kind="show" identifier="toShop" id="QNa-9Z-Ccq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XB0-oI-gdq">
                                         <rect key="frame" x="162.5" y="0.0" width="132.5" height="150"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="comByEngButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Lx-c7-xHA"/>
-                                            <segue destination="NNb-Oh-83r" kind="show" identifier="toEngPost" id="bmN-ZB-fu4"/>
+                                            <action selector="postButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LcE-3o-ude"/>
+                                            <segue destination="NNb-Oh-83r" kind="show" identifier="toPost" id="MSC-rQ-r8x"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -79,9 +79,9 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="comByEngButton" destination="XB0-oI-gdq" id="Nhh-Vk-qia"/>
-                        <outlet property="comByJpnButton" destination="Jl4-f0-MCy" id="23T-z2-C5g"/>
                         <outlet property="contactedButton" destination="OcV-UY-Nbp" id="aN5-aW-sDX"/>
+                        <outlet property="postButton" destination="XB0-oI-gdq" id="oFL-36-kh9"/>
+                        <outlet property="shopButton" destination="Jl4-f0-MCy" id="ZbY-2H-93B"/>
                         <segue destination="fyH-bK-fEJ" kind="show" identifier="toLogin" id="4Jt-p1-Fq7"/>
                     </connections>
                 </viewController>
@@ -89,10 +89,38 @@
             </objects>
             <point key="canvasLocation" x="38" y="37"/>
         </scene>
+        <!--Initial-->
+        <scene sceneID="LFV-q4-rX3">
+            <objects>
+                <viewController storyboardIdentifier="Initial" id="F3h-1A-F6J" customClass="Initial" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9xa-rP-FJ3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvd-Lq-ECw">
+                                <rect key="frame" x="164" y="598" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToLoginButton:" destination="F3h-1A-F6J" eventType="touchUpInside" id="MIC-BM-8YG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bhI-aK-6zp"/>
+                    </view>
+                    <connections>
+                        <outlet property="goToLoginButton" destination="nvd-Lq-ECw" id="Qlq-6m-ERy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vjx-d2-3DD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="881"/>
+        </scene>
         <!--Contacted-->
         <scene sceneID="GT2-5i-BWU">
             <objects>
-                <viewController id="c08-YN-H7C" customClass="Contacted" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Contacted" id="c08-YN-H7C" customClass="Contacted" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D3q-Go-RuU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="902" y="1152"/>
         </scene>
-        <!--Eng Post-->
+        <!--Post-->
         <scene sceneID="wJT-uD-gYS">
             <objects>
-                <viewController id="NNb-Oh-83r" customClass="EngPost" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EngPost" id="NNb-Oh-83r" customClass="Post" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="asD-cT-eOC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="902" y="402"/>
         </scene>
-        <!--Jpn Post-->
+        <!--Shop-->
         <scene sceneID="vaK-bd-c8u">
             <objects>
-                <viewController id="eVd-8A-KVl" customClass="JpnPost" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JpnPost" id="eVd-8A-KVl" customClass="Shop" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="alh-Sj-J3G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +165,7 @@
         <!--Login-->
         <scene sceneID="0RW-uQ-sW9">
             <objects>
-                <viewController id="fyH-bK-fEJ" customClass="Login" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="fyH-bK-fEJ" customClass="Login" customModule="ComuComu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RrU-4h-z5z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
