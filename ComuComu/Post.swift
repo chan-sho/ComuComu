@@ -2,8 +2,8 @@
 //  Post.swift
 //  ComuComu
 //
-//  Created by 高野翔 on 2018/12/26.
-//  Copyright © 2018 高野翔. All rights reserved.
+//  Created by 高野翔 on 2019/01/28.
+//  Copyright © 2019 高野翔. All rights reserved.
 //
 
 import UIKit
